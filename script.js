@@ -1,0 +1,2 @@
+document.querySelector('#year').textContent=new Date().getFullYear();
+const button=document.querySelector('.menu-toggle'),nav=document.querySelector('.site-header nav');button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(open));button.textContent=open?'Close':'Menu';nav.classList.toggle('open',open)});nav.addEventListener('click',e=>{if(e.target.closest('a')){nav.classList.remove('open');button.setAttribute('aria-expanded','false');button.textContent='Menu'}});
